@@ -1,10 +1,24 @@
 import base64
 import io
 import os
+from functools import lru_cache
+from pathlib import Path
+
 from openai import AzureOpenAI
 from dotenv import load_dotenv
 
 load_dotenv(os.path.join(os.path.dirname(__file__), "..", ".env"))
+
+
+GUIDANCE_FILE = Path(__file__).parent / "prompt1" / "guidance.md"
+
+
+@lru_cache
+def load_brand_guidance() -> str:
+    if not GUIDANCE_FILE.is_file():
+        raise FileNotFoundError(f"Brand guidance file was not found: {GUIDANCE_FILE}")
+    return GUIDANCE_FILE.read_text(encoding="utf-8")
+
 
 def generate_image(prompt: str, size: str, samples: int, quality: str = "low", source_image: bytes | None = None) -> list[str]:
     client = AzureOpenAI(
@@ -14,7 +28,7 @@ def generate_image(prompt: str, size: str, samples: int, quality: str = "low", s
     )
     request = {
         "model": os.environ["AZURE_OPENAI_DEPLOYMENT"],
-        "prompt": prompt,
+        "prompt": f"{load_brand_guidance()}\n\n---\n\nUser image brief:\n{prompt}",
         "n": samples,
         "size": size.replace(" ", ""),
         "quality": quality,
