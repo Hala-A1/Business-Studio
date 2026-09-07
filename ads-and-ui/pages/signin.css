@@ -1,0 +1,428 @@
+.signin-screen {
+  display: flex;
+  min-height: 100vh;
+}
+
+.signin-visual {
+  flex: 1 1 46%;
+  background: linear-gradient(155deg, var(--ink) 0%, var(--navy) 62%, #23306e 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 56px;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.signin-visual::after {
+  content: "";
+  position: absolute;
+  right: -160px;
+  bottom: -160px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(224, 7, 0, 0.35), rgba(224, 7, 0, 0) 65%);
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 1;
+}
+
+.brand-mark img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+.brand-logo {
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.08em;
+}
+
+.brand-mark span {
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+}
+
+.signin-copy {
+  z-index: 1;
+  max-width: 440px;
+}
+
+.signin-copy h1 {
+  font-size: 44px;
+  line-height: 1.12;
+  font-weight: 700;
+  margin: 0 0 18px;
+  letter-spacing: -0.01em;
+}
+
+.signin-copy p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+}
+
+.signin-foot {
+  z-index: 1;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.signin-form-wrap {
+  flex: 1 1 54%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  background: var(--paper);
+}
+
+.signin-form {
+  width: 100%;
+  max-width: 380px;
+}
+
+.signin-form .kicker {
+  font-size: 13px;
+  color: var(--graphite);
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.signin-form h2 {
+  font-size: 28px;
+  margin: 0 0 34px;
+  font-weight: 700;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 7px;
+}
+
+.field input {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 10px;
+  border: 1.5px solid var(--line);
+  font-size: 14.5px;
+  background: var(--mist);
+  transition: border-color .15s, background .15s;
+}
+
+.field input:focus {
+  outline: none;
+  border-color: var(--e-red);
+  background: #fff;
+}
+
+.form-row-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13.5px;
+  color: var(--graphite);
+}
+
+.checkbox-row input {
+  accent-color: var(--e-red);
+  width: 15px;
+  height: 15px;
+}
+
+.link-muted {
+  font-size: 13.5px;
+  color: var(--e-red);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: var(--e-red);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: background .15s, transform .1s;
+}
+
+.btn-primary:hover {
+  background: var(--e-red-dark);
+}
+
+.btn-primary:active {
+  transform: scale(0.99);
+}
+
+.divider-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 26px 0;
+  color: var(--graphite);
+  font-size: 12.5px;
+}
+
+.divider-row::before,
+.divider-row::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.sso-row {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-sso {
+  flex: 1;
+  padding: 11px;
+  border-radius: 10px;
+  border: 1.5px solid var(--line);
+  background: #fff;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-sso:hover {
+  border-color: #c7c6cb;
+}
+
+.signup-note {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 13.5px;
+  color: var(--graphite);
+}
+
+.signup-note a {
+  color: var(--e-red);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.workspace-picker h2 {
+  margin-bottom: 24px;
+}
+
+.workspace-screen {
+  min-height: 100vh;
+  padding: 42px 7vw 28px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.workspace-header {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  max-width: none;
+  margin: -42px -7vw 0;
+  padding: 42px 7vw 58px;
+  background: linear-gradient(155deg, var(--ink) 0%, var(--navy) 62%, #23306e 100%);
+  color: #fff;
+}
+
+.workspace-header::after {
+  content: "";
+  position: absolute;
+  right: -160px;
+  bottom: -220px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(224, 7, 0, 0.35), rgba(224, 7, 0, 0) 65%);
+  pointer-events: none;
+  margin: 0 auto;
+}
+
+.workspace-header .brand-mark {
+  color: #fff;
+}
+
+.workspace-header .brand-mark span {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.workspace-header-copy {
+  margin-top: 72px;
+  text-align: center;
+}
+
+.workspace-header-copy h1 {
+  margin: 0 0 12px;
+  font-size: 36px;
+}
+
+.workspace-header-copy p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+}
+
+.workspace-content {
+  display: flex;
+  justify-content: center;
+  padding: 48px 0 34px;
+}
+
+.workspace-content .workspace-picker {
+  width: min(760px, 100%);
+}
+
+.workspace-content .workspace-picker h2 {
+  text-align: center;
+}
+
+.workspace-foot {
+  color: var(--graphite);
+  font-size: 12.5px;
+  text-align: center;
+}
+
+.workspace-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.workspace-card {
+  display: flex;
+  width: 100%;
+  min-height: 210px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  color: var(--ink);
+  text-align: left;
+  transition: border-color .15s, background .15s, transform .1s;
+}
+
+.workspace-card:hover {
+  border-color: var(--e-red);
+  background: #fff8f7;
+  transform: translateY(-1px);
+}
+
+.workspace-card > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.workspace-card small {
+  color: var(--graphite);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.workspace-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  color: var(--e-red);
+  background: #fff0ef;
+}
+
+.workspace-signout {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 18px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--graphite);
+  font-size: 13px;
+}
+
+.workspace-signout:hover {
+  color: var(--e-red);
+}
+
+.workspace-message {
+  margin: -18px 0 24px;
+  color: var(--graphite);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .workspace-screen {
+    padding: 28px 20px 22px;
+  }
+
+  .workspace-header {
+    margin: -28px -20px 0;
+    padding: 28px 20px 48px;
+  }
+
+  .workspace-header-copy {
+    margin-top: 54px;
+  }
+
+  .workspace-header-copy h1 {
+    font-size: 29px;
+  }
+
+  .workspace-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 860px) {
+  .signin-screen {
+    flex-direction: column;
+  }
+  .signin-visual {
+    min-height: 300px;
+    padding: 32px;
+  }
+  .signin-copy h1 {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,36 @@
+:root {
+  --e-red: #E00700;
+  --e-red-dark: #B70600;
+  --ink: #14101F;
+  --navy: #181F4B;
+  --paper: #FFFFFF;
+  --mist: #F5F5F7;
+  --mist-2: #ECEBEE;
+  --graphite: #71706F;
+  --line: #E3E2E6;
+  --radius: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
